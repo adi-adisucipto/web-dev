@@ -58,10 +58,26 @@ for(let i = r.length - 1; i >= 0; i--){
 console.log(`Rp.${s.join("")},00`);
 
 let searchString = "ell";
-let kataKata = "Hello world";
-let kataKataSplit = kataKata.split("");
-let k = 0;
+let mainString = "Hello world";
 
-for(let i = 0; i < searchString.length; i++) {
-    console.log(kataKata[i])
+const hasilString = mainString.indexOf(searchString);
+if(hasilString == -1) {
+    console.log("Hasil tidak ditemukan");
+} else {
+    let kata1 = mainString.slice(0, hasilString);
+    let kata2 = mainString.slice(searchString.length + hasilString, mainString.length)
+    console.log(kata1 + kata2)
 }
+
+let capitalize = "hello world";
+let words = capitalize.split(" ");
+let firstWord = [];
+let lastWord = [];
+let fullWord = [];
+for(let i = 0; i < words.length; i++) {
+    firstWord[i] = words[i].slice(0, 1).toUpperCase();
+    lastWord[i] = words[i].slice(1, words[i].length).toLowerCase();
+    fullWord[i] = firstWord[i] + lastWord[i];
+}
+
+console.log(fullWord.join(" "));
