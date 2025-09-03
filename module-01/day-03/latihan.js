@@ -81,3 +81,16 @@ for(let i = 0; i < words.length; i++) {
 }
 
 console.log(fullWord.join(" "));
+
+
+let wordCheck = "The QuiCk BrOwN Fox";
+let wordSplit = wordCheck.split("");
+let hasil = ""
+for(let i = 0; i < wordCheck.length; i++) {
+    if(wordSplit[i] === wordSplit[i].toUpperCase()){
+        hasil = hasil + wordSplit[i].toLowerCase();
+    } else {
+        hasil = hasil + wordSplit[i].toUpperCase();
+    }
+}
+console.log(hasil);
