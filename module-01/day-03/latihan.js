@@ -98,8 +98,32 @@ console.log(hasil);
 
 let num1 = 42;
 let num2 = 66;
-if(num1 - num2 < 0) {
+if(num1 < num2) {
     console.log("Max: " + num2);
 }  else {
     console.log("Max: " + num1);
+}
+
+let number1 = 42;
+let number2 = 27;
+let number3 = 18;
+
+if(number1 > number2 && number1 > number3) {
+    if(number2 > number3) {
+        console.log(number1, number2, number3);
+    } else{
+        console.log(number1, number3, number2);
+    }
+} else if(number2 > number1 && number2 > number1) {
+    if(number1 > number3){
+        console.log(number2, number1, number3);
+    } else{
+        console.log(number2, number3, number1);
+    }
+} else if(number3 > number1 && number3 > number2){
+    if(number1 > number2){
+        console.log(number3, number1, number2);
+    } else {
+        console.log(number3, number2, number1);
+    }
 }
