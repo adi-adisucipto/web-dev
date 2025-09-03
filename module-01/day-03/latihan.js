@@ -94,3 +94,12 @@ for(let i = 0; i < wordCheck.length; i++) {
     }
 }
 console.log(hasil);
+
+
+let num1 = 42;
+let num2 = 66;
+if(num1 - num2 < 0) {
+    console.log("Max: " + num2);
+}  else {
+    console.log("Max: " + num1);
+}
