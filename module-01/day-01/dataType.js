@@ -8,3 +8,9 @@ console.log(number + 5);
 
 // TIPE DATA BOOLEAN (TRUE / FALSE)
 var boolen = false;
+
+// TIPE DATA UNDEFINED
+const undef = undefined;
+
+// TIPA DATA NUll
+const _null = null;

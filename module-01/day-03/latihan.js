@@ -57,6 +57,8 @@ for(let i = r.length - 1; i >= 0; i--){
 }
 console.log(`Rp.${s.join("")},00`);
 
+
+
 let searchString = "ell";
 let mainString = "Hello world";
 
@@ -104,26 +106,44 @@ if(num1 < num2) {
     console.log("Max: " + num1);
 }
 
-let number1 = 42;
-let number2 = 27;
-let number3 = 18;
 
-if(number1 > number2 && number1 > number3) {
-    if(number2 > number3) {
-        console.log(number1, number2, number3);
-    } else{
-        console.log(number1, number3, number2);
+let number1 = 1;
+let number2 = 3;
+let number3 = 2;
+let h;
+
+if(number1 < number2){
+    h = number2;
+    number2 = number1;
+    number1 = h;
+    if(number1 < number3) {
+        h = number3;
+        number3 = number2;
+        number2 = number1;
+        number1 = h;
+    } else if(number2 < number3){
+        h = number3;
+        number3 = number2;
+        number2 = h;
     }
-} else if(number2 > number1 && number2 > number1) {
-    if(number1 > number3){
-        console.log(number2, number1, number3);
-    } else{
-        console.log(number2, number3, number1);
-    }
-} else if(number3 > number1 && number3 > number2){
-    if(number1 > number2){
-        console.log(number3, number1, number2);
+} else if(number1 < number3) {
+    h = number3;
+    number3 = number1; // number3 = 23
+    number1 = h; // number1 = 45
+}
+
+console.log(number1, number2, number3);
+
+
+let sentence = "An apple a day keeps the doctor away";
+let letter = "e";
+let hasilSentence = "";
+let sentenceSplit = sentence.split("");
+for(let i = 0; i < sentenceSplit.length; i++){
+    if(sentenceSplit[i].toLowerCase() === letter.toLowerCase()){
+        hasilSentence = hasilSentence + "*";
     } else {
-        console.log(number3, number2, number1);
+        hasilSentence = hasilSentence + sentenceSplit[i];
     }
 }
+console.log(hasilSentence);
