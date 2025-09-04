@@ -81,3 +81,37 @@ function pertambahan(num) {
 
 const tambah = pertambahan(5);
 console.log(tambah());
+
+// DEFAULT PARAMETER
+function perkalian(a, b = 1){
+    return a * b;
+}
+
+// gak boleh: function perkalian(a = 1, b)
+
+console.log(perkalian(5, 6));
+
+
+// CURRYING
+function makeSandwich(daging, sayur){
+    return `sandwich isi ${daging} ${sayur}`;
+}
+console.log(makeSandwich("ayam", "brokoli"));
+
+// Ketika parameter pertama banyak yang sama, bisa pakai currying
+function makeSandwich2(daging){
+    return function (sayur) {
+        return `Sandwich dengan isi ${daging} ${sayur}`;
+    }
+}
+
+// Contoh lagi nih
+function addition(n1){
+    return function(n2){
+        return n1 + n2;
+    }
+}
+
+const tambah5 = addition(5);
+const tambah10 = addition(10);
+
