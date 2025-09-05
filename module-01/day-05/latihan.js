@@ -28,6 +28,25 @@ console.log("Higest: " + lowHigAvg([arr])[0]);
 console.log("Lowest: " + lowHigAvg([arr])[1]);
 console.log("Average: " + lowHigAvg([arr])[2]);
 console.log("~~~~~~~ Selesai ~~~~~~~");
+// Pakai Build In Method
+console.log("~~~~ Use Build Method ~~~~");
+function higLowAvg([arr]){
+    let higest;
+    let lowest;
+    arr.sort((a, b) => {
+        return a - b;
+    })
+    higest = arr[arr.length - 1];
+    lowest = arr[0];
+    const sum = arr.reduce((a, b) => {
+        return a + b;
+    }, 0);
+    return [higest, lowest, sum / arr.length];
+}
+console.log("Higest: " + lowHigAvg([arr])[0]);
+console.log("Lowest: " + lowHigAvg([arr])[1]);
+console.log("Average: " + lowHigAvg([arr])[2]);
+console.log("~~~~~~~ Selesai ~~~~~~~");
 console.log("");
 
 
@@ -64,6 +83,13 @@ function secSmall([arr]) {
 let number = [5, 3, 1, 7, 2, 6];
 console.log(`Second smallest of array: ${secSmall([number])}`)
 console.log("~~~~~~~ Selesai ~~~~~~~");
+// Use Build in method
+console.log("~~~~ Use Build in method ~~~~");
+function smallSec([arr]){
+    arr.sort((a, b) => {return a - b});
+    return arr;
+}
+console.log(`Second smallest of array: ${secSmall([number])}`)
 console.log("");
 
 
@@ -233,3 +259,46 @@ console.log("");
 
 
 console.log("~~~ Sum element array of number which duplicate value ~~~");
+// example: [10, 20, 40, 10, 50, 30, 10, 60, 10];
+const p = [10, 20, 40, 10, 50, 30, 10, 60, 10];
+function sumDupArr(arr){
+    let sum = 0;
+    p.map((item) => {
+        let counter = 0;
+        for(let i = 0; i < arr.length; i++) {
+            if(item === p[i]){
+                counter++
+            }
+        }
+        if(counter > 1){
+            sum += item;
+        }
+    })
+    return sum
+}
+console.log(sumDupArr(p));
+console.log("~~~~ Selesai ~~~~");
+console.log("");
+
+
+const x = "paper"
+function paperRockScissor(x){
+    const rand = Math.floor(Math.random() * 3);
+    const z = ["ROCK", "PAPER", "SCISSOR"];
+    let comp = z[rand];
+    const me = x.toUpperCase();
+    let message = `Pemain = ${me}, Komputer = ${comp}, kamu `;
+    if(comp == me){
+        message += "Seri";
+    } else if(
+        me == "ROCK" && comp == z[2] || 
+        me == "PAPER" && comp == z[0] ||
+        me == "SCISSOR" && comp == z[1]
+    ){
+        message += "Menang";
+    } else {
+        message += "Kalah";
+    }
+    return message;
+}
+console.log(paperRockScissor(x));
