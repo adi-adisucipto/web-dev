@@ -281,6 +281,7 @@ console.log("~~~~ Selesai ~~~~");
 console.log("");
 
 
+console.log("~~~~ Rock, Paper, Scissor Game ~~~~");
 const x = "paper"
 function paperRockScissor(x){
     const rand = Math.floor(Math.random() * 3);
@@ -302,3 +303,5 @@ function paperRockScissor(x){
     return message;
 }
 console.log(paperRockScissor(x));
+console.log("~~~~ Selesai ~~~~");
+console.log("");
