@@ -1,7 +1,12 @@
-// for(let i = 1; i <= 10; i++) {
-//     console.log(`9 x ${i} = ${i * 9}`);
-// }
+console.log("~~~~ Multiplication table of a given integer. ~~~~")
+for(let i = 1; i <= 10; i++) {
+    console.log(`9 x ${i} = ${i * 9}`);
+}
+console.log("~~~~ Selesai ~~~~");
+console.log("");
 
+
+console.log("~~~~ Palindrome ~~~~")
 let kata = "radaR";
 let a = kata.toLowerCase().split("");
 let b = [];
@@ -17,26 +22,28 @@ if(b.join("") == kata.toLowerCase()) {
 } else {
     console.log(kata + " bukan paliandrome ❌");
 }
+console.log("~~~~ Selesai ~~~~");
 
-// Convert cm to km
-// 1 km = 100000 cm
+console.log("~~~~ Using build in method ~~~~");
+let z = a.reverse();
+if(z.join("") == kata.toLowerCase()) {
+    console.log(kata + " adalah palindrome ✅");
+} else {
+    console.log(kata + " bukan paliandrome ❌");
+}
+console.log("~~~~ Selesai ~~~~");
+console.log("");
+
+
+console.log("~~~~ Convert cm to km ~~~~");
 let cm = 30;
 let km = cm / 100000
 console.log(`${cm} cm sama dengan ${km} km`);
+console.log("~~~~ Selesai ~~~~");
+console.log("");
 
 
-// let duit = 100000;
-// let p = String(duit).split("");
-// let q = p.reverse();
-// let r = [];
-// for(let i = 1; i <= p.length; i++){
-//     r.push(q[i - 1])
-//     if(i % 3 == 0 && i != p.length){
-//         r.push(".");
-//     }
-// }
-// console.log(`Rp.${r.reverse().join("")},00`)
-
+console.log("Format number as currency (IDR)");
 let duit = 100000000;
 let p = String(duit).split("");
 let q = 1;
@@ -56,9 +63,12 @@ for(let i = r.length - 1; i >= 0; i--){
     u++
 }
 console.log(`Rp.${s.join("")},00`);
+console.log("~~~~ Selesai ~~~~");
+console.log("");
 
 
 
+console.log("~~~~ Remove the first occurrence of a given “search string” from a string ~~~~")
 let searchString = "ell";
 let mainString = "Hello world";
 
@@ -70,7 +80,11 @@ if(hasilString == -1) {
     let kata2 = mainString.slice(searchString.length + hasilString, mainString.length)
     console.log(kata1 + kata2)
 }
+console.log("~~~~ Selesai ~~~~");
+console.log("");
 
+
+console.log("~~~~ Capitalize the first letter of each word in a string ~~~~")
 let capitalize = "hello world";
 let words = capitalize.split(" ");
 let firstWord = [];
@@ -81,10 +95,12 @@ for(let i = 0; i < words.length; i++) {
     lastWord[i] = words[i].slice(1, words[i].length).toLowerCase();
     fullWord[i] = firstWord[i] + lastWord[i];
 }
-
 console.log(fullWord.join(" "));
+console.log("~~~~ Selesai ~~~~");
+console.log("");
 
 
+console.log("~~~~ Swap the case of each character from string ~~~~")
 let wordCheck = "The QuiCk BrOwN Fox";
 let wordSplit = wordCheck.split("");
 let hasil = ""
@@ -96,17 +112,25 @@ for(let i = 0; i < wordCheck.length; i++) {
     }
 }
 console.log(hasil);
+console.log("~~~~ Selesai ~~~~");
+console.log("");
 
 
+console.log("~~~~ Find the largest of two given integers ~~~~");
 let num1 = 42;
 let num2 = 66;
-if(num1 < num2) {
+if(num1 == num2) {
+    console.log("Same integer");
+} else if(num1 < num2) {
     console.log("Max: " + num2);
 }  else {
     console.log("Max: " + num1);
 }
+console.log("~~~~ Selesai ~~~~");
+console.log("");
 
 
+console.log("~~~~ Sort three numbers ~~~~");
 let number1 = 1;
 let number2 = 3;
 let number3 = 2;
@@ -128,13 +152,29 @@ if(number1 < number2){
     }
 } else if(number1 < number3) {
     h = number3;
-    number3 = number1; // number3 = 23
-    number1 = h; // number1 = 45
+    number3 = number1;
+    number1 = h;
 }
 
 console.log(number1, number2, number3);
+console.log("~~~~ Selesai ~~~~");
+console.log("");
 
 
+console.log("~~~~ Shows 1 if the input is a string, 2 if the input is a number, and 3 for others data type. ~~~~");
+const dataType = "hello";
+if(typeof dataType == "string"){
+    console.log(`${typeof dataType} = 1`);
+} else if(typeof dataType == "number") {
+    console.log(`${typeof dataType} = 2`);
+} else {
+    console.log(`${typeof dataType} = 3`)
+}
+console.log("~~~~ Selesai ~~~~");
+console.log("");
+
+
+console.log("~~~~ Change every letter a into * from a string of input ~~~~")
 let sentence = "An apple a day keeps the doctor away";
 let letter = "e";
 let hasilSentence = "";
@@ -147,3 +187,5 @@ for(let i = 0; i < sentenceSplit.length; i++){
     }
 }
 console.log(hasilSentence);
+console.log("~~~~ Selesai ~~~~");
+console.log("");
